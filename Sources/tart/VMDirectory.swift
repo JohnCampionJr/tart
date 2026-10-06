@@ -33,6 +33,10 @@ struct VMDirectory: Prunable {
     URL(fileURLWithPath: "control.sock", relativeTo: baseURL)
   }
 
+  var softnetControlSocketURL: URL {
+    URL(fileURLWithPath: "softnet.sock", relativeTo: baseURL)
+  }
+
   var explicitlyPulledMark: URL {
     baseURL.appendingPathComponent(".explicitly-pulled")
   }
